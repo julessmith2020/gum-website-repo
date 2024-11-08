@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celeb Chews</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles.css"> <!-- Link to custom CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a class="navbar" href="/">CelebChews</a>
+  </nav>
+  <div class="hero">
+    <img src="https://gum-bucket-images.s3.us-east-2.amazonaws.com/Queen-hero-gum.png" alt="Banner Image">
+  </div>
+
+
+  <div class="container mt-5">
+
+    <h2 class="my-4 text-center">Explore the Collection</h2>
+    <br>
+
+    <div class="row">
+      <% celebrities.forEach(function(celeb) { %>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="<%= celeb.Image %>" alt="<%= celeb.Name %>">
+            <div class="card-body">
+              <h5 class="card-title"><%= celeb.Name %></h5>
+              <p class="card-text">$<%= celeb.Price %></p>
+            
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+
+  <footer class="footer feet">
+    <p>&copy; 2024 Celeb Chews. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
