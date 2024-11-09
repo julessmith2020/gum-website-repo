@@ -3,10 +3,10 @@ const app = express();
 const knex = require("knex")({
   client: "mysql",
   connection: {
-    host: "celebritygumdb.c76cak40aeql.us-east-2.rds.amazonaws.com",
+    host: "gum-db.c76cak40aeql.us-east-2.rds.amazonaws.com",
     user: "admin",
-    password: "S!llyg!rls12345",
-    database: "Celebrity",
+    password: "password123",
+    database: "paradise-gum",
     port: 3306,
   },
 });
